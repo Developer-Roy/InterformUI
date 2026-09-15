@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      InterformUI: a curated list of animated components and templates.
+    </title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- boxicon  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <nav class="navbar">
+        <div class="logo">
+          <span class="logo-img">
+            <img src="./assets/blue_circle_profile.png" alt="">
+          </span>
+          <span class="logo-text">InterformUI</span>
+        </div>
+
+        <ul class="list-item">
+          <li>
+            <a href="#">
+              <span class="onespan">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="onespan">Components</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="onespan">Templates</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="toggleBtn">
+          <i class="bx bxs-moon moon"></i>
+          <i class="bx bxs-sun sun"></i>
+        </div>
+      </nav>
+
+      <div class="badge">
+        <div class="visible-badge">
+          <a href="#" class="badge-text">
+            <span>total components</span>
+          </a>
+          <a href="#" class="badge-count">
+            <span>15</span>
+          </a>
+        </div>
+
+        <div class="hidden-badge">
+          <div class="newly-badge">
+            <a href="#" class="newly-t">
+              <span>Newly added</span>
+              <span>01</span>
+            </a>
+            <a href="#" class="mypersonal">
+              <span>My personal</span>
+              <span></span>
+            </a>
+            <a href="#" class="recommended">
+              <span>Recommended</span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <h1>
+          Interface
+          <div class="face">
+            <div class="eyes">
+              <div class="eyeball"></div>
+              <div class="eyeball"></div>
+            </div>
+          </div>
+          with a <span class="italic">pulse.</span>
+        </h1>
+        <p>
+          Every component is fully interactive right here on the page. Hover it,
+          click it, feel how it moves before you ever touch a line of code.
+        </p>
+
+        <div class="buttons">
+          <a href="#" class="githubStar">
+            <span>Github</span>
+            <span>
+              <i class="bx bxs-star"></i>
+            </span>
+          </a>
+          <a href="#" class="browseAll">
+            <span>Browse All</span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section id="components">
+      <div class="components-group">
+        <div class="grid"></div>
+        <div class="all"></div>
+      </div>
+    </section>
+
+    <section id="templates">
+      <div class="template-group">
+        <div class="template-texts">
+          <div class="text-bot">
+            <div class="bot-tempt"></div>
+            <h3>
+              Templates
+              <span>built from pieces that already have a pulse.</span>
+            </h3>
+            <div class="totalTempt"></div>
+          </div>
+          <div class="tempt-para">
+            <p>
+              full page compositions, assembled from components you've already
+              seen move. no blank canvas, no guesswork just proven pieces,
+              arranged.
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid"></div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

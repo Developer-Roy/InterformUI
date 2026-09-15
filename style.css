@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Geist", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+
+}
+
+body.dark{
+
+}
+
+
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+        flex-direction: column;
+}
+
+.navbar{
+    width: 700px;
+    margin: auto;
+    height: 60px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logo-img{
+    width: 35px;
+    height: 35px;
+}
+.logo-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    padding: 10px 14px;
+    background: #ececec;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+ul li a{
+    color: black;
+}
+
+/* HOME */
+ul li:nth-child(1).active-li {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/* COMPONENTS */
+ul li:nth-child(2).active-li {
+    border-radius: 12px;
+}
+
+/* TEMPLATES */
+ul li:nth-child(3).active-li {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.toggleBtn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+.toggleBtn i{
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+i.sun{
+    opacity: 0;
+    pointer-events: none;
+    filter: blur(8px);
+    rotate: 90deg;
+}
+
+i.moon{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toggleBtn.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+    filter: blur(0px);
+    rotate: 0deg;
+}
+.toggleBtn.active i.moon{
+    opacity: 0;
+    pointer-events: auto;
+}
+
+
+
+.badge{
+    margin-top: 48px;
+}
+
+.visible-badge{
+    width: 150px;
+    background: #f2f2f2;
+    border-radius: 16px;
+    padding: 2px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.badge-text{
+    font-size: 12px;
+    color: #000;
+}
+
+.badge-count{
+background-color: #76BDFF;
+    border-radius: 8px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badge-count span{
+    color: #fff;
+    font-size: 12px;
+}
+
+
+.hidden-badge{
+    opacity: 0;
+}
+
+
+.hero-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Geist", sans-serif;
+}
+
+.hero-text h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.face {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 12px #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    padding: 2px;
+}
+
+.eyes {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 5px;
+}
+
+.eyeball {
+    width: 6px;
+    height: 12px;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    transform-origin: center center;
+
+    will-change: transform;
+}
+
+span.italic{
+    font-family: "Playwrite US Trad", cursive;
+    color: #0048ff;
+    font-weight: 500;
+    height: auto;
+    font-size: 44px;
+    padding-left: 7px;
+    padding-bottom: 6px;
+}
+
+.hero-text p{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    color: #BDBDBD;
+    margin-top: 16px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.buttons a{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+        border-radius: 8px;
+}
+.githubStar{
+    background-color: #EDEDED;
+    color: #000;
+    transition: all 0.3s ease;
+    scale: 1;
+}
+
+.githubStar:hover{
+    background-color: #e6e6e6;
+    scale: 1.02;
+}
+
+.browseAll{
+    background: #0048ff;
+    color: #fff;
+    box-shadow: inset 0px 2px 8px #ffffff;
+
+}
+
+
+/* components section  */
+#components{
+    width: 100%;
+    height: 100vh;
+    margin-top: 32px;
+}
