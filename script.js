@@ -15,6 +15,45 @@ listItems.forEach(li => {
     });
 });
 
+// navbar animated while scroll 
+const navbar = document.querySelector(".navbar");
+
+let navIsSmall = false;
+
+window.addEventListener("scroll", () => {
+
+    const scrollY = window.scrollY;
+
+    if (scrollY > 50 && !navIsSmall) {
+
+        navIsSmall = true;
+
+        const tl = gsap.timeline();
+
+        tl.to(navbar, {
+            width: "520px",
+            height: "48px",
+            duration: 0.7,
+            ease: "power3.out"
+        });
+
+    } 
+    
+    else if (scrollY <= 50 && navIsSmall) {
+
+        navIsSmall = false;
+
+        const tl = gsap.timeline();
+
+        tl.to(navbar, {
+            width: "700px",
+            height: "60px",
+            duration: 0.7,
+            ease: "power3.out"
+        });
+    }
+});
+
 
 // Click anywhere outside the list
 document.addEventListener('click', (e) => {
