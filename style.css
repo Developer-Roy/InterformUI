@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad:wght@100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
+
 
 * {
   margin: 0;
@@ -33,6 +34,7 @@ body.dark {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 8px;
 }
 
 .navbar {
@@ -68,8 +70,8 @@ body.dark {
 }
 
 .logo-img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 .logo-img img {
   width: 100%;
@@ -113,16 +115,20 @@ ul li:nth-child(3).active-li {
 }
 
 .hiddennav {
-  width: 100px;
-  height: 40px;
-  border-radius: 36px;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 8px;
-  display: none;
+    width: 100px;
+    min-height: 36px;
+    border-radius: 20px;
+    background: #f2f2f2;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    padding: 6px 10px;
+
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .firstvisible {
@@ -263,6 +269,13 @@ i.moon {
   font-size: 48px;
 }
 
+h1 .interFace{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
 .face {
   width: 45px;
   height: 45px;
@@ -308,14 +321,22 @@ i.moon {
   will-change: transform;
 }
 
-span.italic {
+.twoSpan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6px;
+  gap: 8px;
+}
+
+.hero-text .italic {
   font-family: "Playwrite US Trad", cursive;
   color: #0048ff;
   font-weight: 500;
   height: auto;
   font-size: 44px;
   padding-left: 7px;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
 }
 
 .hero-text p {
@@ -352,13 +373,19 @@ span.italic {
 
 .githubStar:hover {
   background-color: #e6e6e6;
-  scale: 1.02;
 }
 
 .browseAll {
   background: #0048ff;
   color: #fff;
   box-shadow: inset 0px 2px 8px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.browseAll:hover{
+    background: #0048ff;
+  box-shadow: inset 0px 1.5px 8px #fffffff1, inset 0px -1px 8px #fffffff1;
+  outline: 3px solid #e8e8ff;
 }
 
 /* COMPONENTS */
@@ -507,28 +534,76 @@ span.italic {
 
 @media (max-width: 735px) {
 
+        .navbar {
+        width: calc(100% - 24px);
+        height: 52px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding: 9px 12px;
+
+        border-radius: 18px;
+    }
+
     .list-item {
         display: none;
     }
 
     .hiddennav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .toggleBtn{
+    .toggleBtn {
         display: none;
     }
 
-    .navbar {
-        width: calc(100% - 24px);
-        height: 60px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .hiddennav {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .hero-text h1{
+      font-size: 38px;
+    }
+
+    .hero-text .italic{
+      font-size: 38px;
+      font-family: "Playwrite US Trad", cursive;
     }
 }
 
 @media (max-width: 600px) {
+
+  .hero-text h1{
+    font-size: 32px;
+  }
+
+   .hero-text .italic{
+      font-size: 32px;
+      font-family: "Playwrite US Trad", cursive;
+    }
+
+        .hiddennav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstvisible{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
   #components {
     height: 100%;
 
@@ -554,4 +629,61 @@ span.italic {
   .component-video {
     aspect-ratio: 3 / 4;
   }
+}
+
+
+@media (max-width: 435px){
+ .hero-text h1{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 400;
+ }
+
+ .hero-text p{
+  font-size: 14px;
+  flex-wrap: wrap;
+    width: 300px;
+  margin: auto;
+  text-align: center;
+  margin-top: 16px;
+ }
+
+ h1 .interFace{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+ }
+
+ h1 .twoSpan{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+ }
+
+ .face{
+  width: 35px;
+  height: 35px;
+ }
+
+ .eyeball{
+  width: 5px;
+  height: 10px;
+ }
+
+ .buttons{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+    width: 100%;
+ }
+ .buttons a{
+  width: 100%;
+ }
 }
