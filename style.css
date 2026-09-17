@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+US+Trad:wght@100..400&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Geist", sans-serif;
 }
 
 a {
@@ -17,6 +15,7 @@ li {
 }
 
 body {
+  font-family: "Geist", sans-serif;
   width: 100%;
   height: 100%;
   position: relative;
@@ -115,20 +114,20 @@ ul li:nth-child(3).active-li {
 }
 
 .hiddennav {
-    width: 100px;
-    min-height: 36px;
-    border-radius: 20px;
-    background: #f2f2f2;
+  width: 100px;
+  min-height: 36px;
+  border-radius: 20px;
+  background: #f2f2f2;
 
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 
-    padding: 6px 10px;
+  padding: 6px 10px;
 
-    overflow: hidden;
-    transition: all 0.3s ease;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .firstvisible {
@@ -138,8 +137,8 @@ ul li:nth-child(3).active-li {
   width: 100%;
 }
 
-.menuText h3{
-    font-size: 14px;
+.menuText h3 {
+  font-size: 14px;
 }
 
 .menuIcon {
@@ -223,7 +222,7 @@ i.moon {
   width: 150px;
   background: #f2f2f2;
   border-radius: 16px;
-  padding: 2px 3px;
+  padding: 2px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,7 +268,7 @@ i.moon {
   font-size: 48px;
 }
 
-h1 .interFace{
+h1 .interFace {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,7 +320,7 @@ h1 .interFace{
   will-change: transform;
 }
 
-.twoSpan{
+.twoSpan {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,13 +329,15 @@ h1 .interFace{
 }
 
 .hero-text .italic {
-  font-family: "Playwrite US Trad", cursive;
+  font-family: "Pacifico", cursive;
+  font-optical-sizing: auto;
   color: #0048ff;
-  font-weight: 500;
+  font-weight: 400;
   height: auto;
   font-size: 44px;
-  padding-left: 7px;
-  padding-bottom: 12px;
+  padding-left: 5px;
+  font-style: italic;
+  padding-bottom: 8px;
 }
 
 .hero-text p {
@@ -345,6 +346,7 @@ h1 .interFace{
   text-align: center;
   color: #bdbdbd;
   margin-top: 16px;
+  line-height: 22px;
 }
 
 .buttons {
@@ -382,9 +384,11 @@ h1 .interFace{
   transition: all 0.3s ease;
 }
 
-.browseAll:hover{
-    background: #0048ff;
-  box-shadow: inset 0px 1.5px 8px #fffffff1, inset 0px -1px 8px #fffffff1;
+.browseAll:hover {
+  background: #0048ff;
+  box-shadow:
+    inset 0px 1.5px 8px #fffffff1,
+    inset 0px -1px 8px #fffffff1;
   outline: 3px solid #e8e8ff;
 }
 
@@ -399,19 +403,6 @@ h1 .interFace{
   position: relative;
   z-index: 10;
   margin: 38px auto;
-}
-
-#components a {
-  position: absolute;
-  top: 103%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  color: #000;
 }
 
 .components-group {
@@ -445,12 +436,74 @@ h1 .interFace{
   cursor: pointer;
 }
 
+#viewAllcompo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+  background-color: #0048ff;
+}
+
+#viewAllcompo:hover .seeAllText {
+  /* transform: translateY(-5px); */
+  padding: 0px 12px;
+}
+
+#viewAllcompo:hover .cards h1 {
+  text-shadow: 0px 18px 5px #93b2ff;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: #4177ff;
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px #4177ff;
+}
+
+.cards h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a5beff;
+  text-shadow: 0px 18px 8px #93b2ff;
+  transition: all 0.25s ease-out;
+}
+
+.seeAllText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: all 0.25s ease-out;
+}
+
+.seeAllText h4 {
+  color: white;
+}
+
+.seeAllText i {
+  color: #fff;
+  rotate: -45deg;
+}
+
 .component-video {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #e7e7e7;
   border-radius: 8px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .component-video video {
@@ -472,6 +525,14 @@ h1 .interFace{
   gap: 3px;
 }
 
+.detailsTexts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  flex-direction: column;
+}
+
 .component-details h3 {
   margin: 0;
 
@@ -486,7 +547,7 @@ h1 .interFace{
 
   font-size: 12px;
 
-  color: #888;
+  color: #b8b8b8;
 }
 
 .component-details span {
@@ -533,76 +594,73 @@ h1 .interFace{
 }
 
 @media (max-width: 735px) {
+  .navbar {
+    width: calc(100% - 24px);
+    height: 52px;
 
-        .navbar {
-        width: calc(100% - 24px);
-        height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+    padding: 9px 12px;
 
-        padding: 9px 12px;
+    border-radius: 18px;
+  }
 
-        border-radius: 18px;
-    }
+  .list-item {
+    display: none;
+  }
 
-    .list-item {
-        display: none;
-    }
+  .hiddennav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .hiddennav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .toggleBtn {
+    display: none;
+  }
 
-    .toggleBtn {
-        display: none;
-    }
+  .logo {
+    flex-shrink: 0;
+  }
 
-    .logo {
-        flex-shrink: 0;
-    }
+  .hiddennav {
+    margin-left: auto;
+    margin-right: 10px;
+  }
 
-    .hiddennav {
-        margin-left: auto;
-        margin-right: 10px;
-    }
+  .hero-text h1 {
+    font-size: 38px;
+  }
 
-    .hero-text h1{
-      font-size: 38px;
-    }
-
-    .hero-text .italic{
-      font-size: 38px;
-      font-family: "Playwrite US Trad", cursive;
-    }
+  .hero-text .italic {
+    font-size: 38px;
+    font-family: "Playwrite US Trad", cursive;
+  }
 }
 
 @media (max-width: 600px) {
-
-  .hero-text h1{
+  .hero-text h1 {
     font-size: 32px;
   }
 
-   .hero-text .italic{
-      font-size: 32px;
-      font-family: "Playwrite US Trad", cursive;
-    }
+  .hero-text .italic {
+    font-size: 32px;
+    font-family: "Playwrite US Trad", cursive;
+  }
 
-        .hiddennav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .hiddennav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .firstvisible{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
+  .firstvisible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   #components {
     height: 100%;
@@ -631,59 +689,58 @@ h1 .interFace{
   }
 }
 
+@media (max-width: 435px) {
+  .hero-text h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 400;
+  }
 
-@media (max-width: 435px){
- .hero-text h1{
-      display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-weight: 400;
- }
-
- .hero-text p{
-  font-size: 14px;
-  flex-wrap: wrap;
+  .hero-text p {
+    font-size: 14px;
+    flex-wrap: wrap;
     width: 300px;
-  margin: auto;
-  text-align: center;
-  margin-top: 16px;
- }
+    margin: auto;
+    text-align: center;
+    margin-top: 16px;
+  }
 
- h1 .interFace{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
- }
+  h1 .interFace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
 
- h1 .twoSpan{
-  display: flex;
+  h1 .twoSpan {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
- }
+  }
 
- .face{
-  width: 35px;
-  height: 35px;
- }
+  .face {
+    width: 35px;
+    height: 35px;
+  }
 
- .eyeball{
-  width: 5px;
-  height: 10px;
- }
+  .eyeball {
+    width: 5px;
+    height: 10px;
+  }
 
- .buttons{
-  display: flex;
+  .buttons {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 12px;
     margin-top: 28px;
     width: 100%;
- }
- .buttons a{
-  width: 100%;
- }
+  }
+  .buttons a {
+    width: 100%;
+  }
 }
