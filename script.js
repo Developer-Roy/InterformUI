@@ -176,3 +176,136 @@ const tl = gsap.timeline();
 
 // First blink
 gsap.delayedCall(2, blink);
+
+
+
+
+
+// ========================================
+// PAGE LOAD ANIMATION
+// ========================================
+
+window.addEventListener("load", () => {
+
+    const loadTL = gsap.timeline({
+        defaults: {
+            ease: "power3.out"
+        }
+    });
+
+
+    // ====================================
+    // NAVBAR
+    // ====================================
+
+    loadTL.to(".navbar", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 10,
+        scale: 1,
+
+        duration: 0.8
+
+    });
+
+
+    // ====================================
+    // BADGE
+    // ====================================
+
+    loadTL.to(".badge", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 0,
+
+        duration: 0.6
+
+    }, "-=0.35");
+
+
+    // ====================================
+    // MAIN HEADLINE
+    // ====================================
+
+    loadTL.to(".hero-text h1", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 0,
+        scale: 1,
+
+        duration: 0.8,
+
+        ease: "power4.out"
+
+    }, "-=0.15");
+
+
+    // ====================================
+    // PARAGRAPH
+    // ====================================
+
+    loadTL.to(".hero-text p", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 0,
+
+        duration: 0.6
+
+    }, "-=0.45");
+
+
+    // ====================================
+    // CTA BUTTONS
+    // ====================================
+
+    loadTL.to(".hero-text .buttons", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 0,
+
+        duration: 0.6
+
+    }, "-=0.35");
+
+
+    // ====================================
+    // COMPONENT GRID
+    // ====================================
+
+    loadTL.to('.components-text h2', {
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        
+    }, "-=0.10")
+
+    loadTL.to(".component-card", {
+
+        opacity: 1,
+        filter: "blur(0px)",
+
+        y: 0,
+        scale: 1,
+
+        duration: 0.7,
+
+        stagger: {
+            each: 0.08,
+            from: "start"
+        }
+
+    }, "-=0.15");
+
+});

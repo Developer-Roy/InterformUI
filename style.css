@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+US+Trad:wght@100..400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
 
 * {
   margin: 0;
@@ -26,6 +26,43 @@ body {
 
 body.dark {
 }
+
+
+.border{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    position: absolute;
+}
+
+.border-container{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #ececec;
+    z-index: 9;
+}
+
+.border-text{
+      position: absolute;
+    left: 70%;
+    z-index: 99;
+    background: #ededed;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+.totalCount{
+      position: absolute;
+    left: 78.4%;
+    z-index: 999;
+    background: #ededed;
+    padding: 0px 4px;
+    border-radius: 5px;
+}
+
+
 
 .home {
   width: 100%;
@@ -329,14 +366,13 @@ h1 .interFace {
 }
 
 .hero-text .italic {
-  font-family: "Pacifico", cursive;
+  font-family: "Playwrite US Trad", cursive;
   font-optical-sizing: auto;
   color: #0048ff;
   font-weight: 400;
   height: auto;
   font-size: 44px;
   padding-left: 5px;
-  font-style: italic;
   padding-bottom: 8px;
 }
 
@@ -399,11 +435,38 @@ h1 .interFace {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-direction: column;
   position: relative;
   z-index: 10;
-  margin: 38px auto;
+  margin: 100px auto;
 }
+
+.components-text{
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.components-text h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: #d5d5d5;
+    font-weight: 500;
+}
+
+
+h2 span{
+width: 10px;
+    height: 10px;
+    background-color: #f1f1f1;
+}
+
 
 .components-group {
   width: 100%;
@@ -464,6 +527,7 @@ h1 .interFace {
   height: 50%;
   border-radius: 8px;
   box-shadow: 0px 2px 8px #4177ff;
+  border: 1px solid #6a94ff;
 }
 
 .cards h1 {
@@ -471,7 +535,7 @@ h1 .interFace {
   justify-content: center;
   align-items: center;
   color: #a5beff;
-  text-shadow: 0px 18px 8px #93b2ff;
+  text-shadow: 0px 18px 16px #93b2ff;
   transition: all 0.25s ease-out;
 }
 
@@ -483,8 +547,9 @@ h1 .interFace {
   transition: all 0.25s ease-out;
 }
 
-.seeAllText h4 {
+.seeAllText h3 {
   color: white;
+  font-family: "Inter Tight", sans-serif;
 }
 
 .seeAllText i {
@@ -523,6 +588,15 @@ video {
   align-items: center;
 
   gap: 3px;
+}
+
+.component-card:hover .cardArrow{
+    rotate: -45deg;
+}
+
+.component-details .cardArrow{
+  transition: all 0.25s ease-out;
+  font-size: 20px;
 }
 
 .detailsTexts {
@@ -743,4 +817,68 @@ video {
   .buttons a {
     width: 100%;
   }
+}
+
+
+
+/* ========================================
+   PAGE LOAD ANIMATION
+======================================== */
+
+/* Initial hidden state */
+
+.navbar,
+.badge,
+.hero-text h1,
+.hero-text p,
+.hero-text .buttons,
+.components-text h2,
+.component-card {
+    opacity: 0;
+    filter: blur(12px);
+}
+
+
+/* Navbar */
+
+.navbar {
+    transform: translateY(5px) scale(0.96);
+}
+
+
+/* Badge */
+
+.badge {
+    transform: translateY(20px);
+}
+
+
+/* Main headline */
+
+.hero-text h1 {
+    transform: translateY(35px) scale(0.97);
+}
+
+
+/* Paragraph */
+
+.hero-text p {
+    transform: translateY(25px);
+}
+
+
+/* CTA */
+
+.hero-text .buttons {
+    transform: translateY(25px);
+}
+
+/* Components */
+
+.components-text h2{
+  transform: translateY(30px) scale(0.96);
+}
+
+.component-card {
+    transform: translateY(35px) scale(0.96);
 }
