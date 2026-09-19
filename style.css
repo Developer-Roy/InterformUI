@@ -450,7 +450,7 @@ h1 .interFace {
     align-items: center;
 }
 
-.components-text h2{
+.components-text h3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -461,7 +461,7 @@ h1 .interFace {
 }
 
 
-h2 span{
+h3 span{
 width: 10px;
     height: 10px;
     background-color: #f1f1f1;
@@ -875,8 +875,9 @@ video {
 
 /* Components */
 
-.components-text h2{
+.components-text h3{
   transform: translateY(30px) scale(0.96);
+  opacity: 0;
 }
 
 .component-card {

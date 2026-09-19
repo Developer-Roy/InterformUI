@@ -282,14 +282,14 @@ window.addEventListener("load", () => {
     // COMPONENT GRID
     // ====================================
 
-    loadTL.to('.components-text h2', {
+    loadTL.to('.components-text h3', {
         opacity: 1,
         filter: "blur(0px)",
         y: 0,
         scale: 1,
         duration: 0.5,
         
-    }, "-=0.10")
+    }, "-=0.20")
 
     loadTL.to(".component-card", {
 
